@@ -34,6 +34,6 @@ public class CalculatorTest {
     @Test(expected = ArithmeticException.class)
     public void testDivideByZero() {
         Calculator calc = new Calculator();
-        calc.divide(10, 0);  // Should throw ArithmeticException
+        calc.divide(10, 0);
     }
 }

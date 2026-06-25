@@ -1,16 +1,16 @@
 public class SearchAlgorithms {
 
-    // LINEAR SEARCH - O(n) - checks each element one by one
+    // O(n) Linear Search
     public static Product linearSearch(Product[] products, String targetName) {
         for (int i = 0; i < products.length; i++) {
             if (products[i].productName.equalsIgnoreCase(targetName)) {
-                return products[i];  // Found it
+                return products[i];
             }
         }
-        return null;  // Not found
+        return null;
     }
 
-    // BINARY SEARCH - O(log n) - array MUST be sorted by productName first
+    // O(log n) Binary Search (requires array sorted by product name)
     public static Product binarySearch(Product[] products, String targetName) {
         int left = 0;
         int right = products.length - 1;
@@ -20,13 +20,13 @@ public class SearchAlgorithms {
             int comparison = products[mid].productName.compareToIgnoreCase(targetName);
 
             if (comparison == 0) {
-                return products[mid];  // Found it
+                return products[mid];
             } else if (comparison < 0) {
-                left = mid + 1;        // Target is in right half
+                left = mid + 1;
             } else {
-                right = mid - 1;       // Target is in left half
+                right = mid - 1;
             }
         }
-        return null;  // Not found
+        return null;
     }
 }

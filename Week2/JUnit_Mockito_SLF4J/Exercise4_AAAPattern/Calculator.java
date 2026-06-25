@@ -1,4 +1,3 @@
-// Simple class that we will write tests for
 public class Calculator {
 
     public int add(int a, int b) {

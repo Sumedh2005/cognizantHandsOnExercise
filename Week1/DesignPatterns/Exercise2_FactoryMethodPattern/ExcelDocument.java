@@ -1,4 +1,3 @@
-// Concrete class 3
 public class ExcelDocument implements Document {
     @Override
     public void open() {
