@@ -36,19 +36,30 @@ This repository contains the hands-on exercise submissions for the **Cognizant D
 │       ├── Exercise2_EcommerceSearch/
 │       └── Exercise7_FinancialForecasting/
 │
-└── Week2/
-    ├── PLSQL/
-    │   ├── schema_and_data.sql
-    │   ├── Exercise1_ControlStructures.sql
-    │   └── Exercise3_StoredProcedures.sql
-    └── JUnit_Mockito_SLF4J/
+├── Week2/
+│   ├── PLSQL/
+│   │   ├── schema_and_data.sql
+│   │   ├── Exercise1_ControlStructures.sql
+│   │   └── Exercise3_StoredProcedures.sql
+│   └── JUnit_Mockito_SLF4J/
+│       ├── pom.xml
+│       ├── Exercise1_SetupJUnit/
+│       ├── Exercise3_Assertions/
+│       ├── Exercise4_AAAPattern/
+│       ├── Exercise1_Mockito_MockingStubbing/
+│       ├── Exercise2_Mockito_VerifyInteractions/
+│       └── Exercise1_SLF4J_Logging/
+│
+└── Week3/
+    └── SpringCoreMaven/
         ├── pom.xml
-        ├── Exercise1_SetupJUnit/
-        ├── Exercise3_Assertions/
-        ├── Exercise4_AAAPattern/
-        ├── Exercise1_Mockito_MockingStubbing/
-        ├── Exercise2_Mockito_VerifyInteractions/
-        └── Exercise1_SLF4J_Logging/
+        ├── src/main/resources/
+        │   └── applicationContext.xml
+        └── src/main/java/com/library/
+            ├── LibraryManagementApplication.java
+            ├── service/BookService.java
+            ├── repository/BookRepository.java
+            └── aspect/LoggingAspect.java
 ```
 
 ---
@@ -76,12 +87,20 @@ This repository contains the hands-on exercise submissions for the **Cognizant D
 - **SLF4J Logging Framework**
   - Exercise 1: Logging Error Messages and Warning Levels
 
+### Week 3 — Products and Frameworks (Spring Core & Maven)
+- **Spring Core and Maven**
+  - Exercise 1: Configuring a Basic Spring Application
+  - Exercise 2: Implementing Dependency Injection
+  - Exercise 4: Creating and Configuring a Maven Project
+
 ---
 
 ## 🛠️ Tech Stack
 
 - Java 11
 - Maven
+- Spring Framework 5.3
+- Spring AOP + AspectJ
 - JUnit 4
 - Mockito
 - SLF4J + Logback
