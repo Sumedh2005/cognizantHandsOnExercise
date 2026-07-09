@@ -50,16 +50,30 @@ This repository contains the hands-on exercise submissions for the **Cognizant D
 │       ├── Exercise2_Mockito_VerifyInteractions/
 │       └── Exercise1_SLF4J_Logging/
 │
-└── Week3/
-    └── SpringCoreMaven/
+├── Week3/
+│   └── SpringCoreMaven/
+│       ├── pom.xml
+│       ├── src/main/resources/
+│       │   └── applicationContext.xml
+│       └── src/main/java/com/library/
+│           ├── LibraryManagementApplication.java
+│           ├── service/BookService.java
+│           ├── repository/BookRepository.java
+│           └── aspect/LoggingAspect.java
+│
+└── Week4/
+    └── EmployeeManagementSystem/
         ├── pom.xml
         ├── src/main/resources/
-        │   └── applicationContext.xml
-        └── src/main/java/com/library/
-            ├── LibraryManagementApplication.java
-            ├── service/BookService.java
-            ├── repository/BookRepository.java
-            └── aspect/LoggingAspect.java
+        │   └── application.properties
+        └── src/main/java/com/cognizant/
+            ├── EmployeeManagementApplication.java
+            ├── entity/Employee.java
+            ├── entity/Department.java
+            ├── repository/EmployeeRepository.java
+            ├── repository/DepartmentRepository.java
+            ├── controller/EmployeeController.java
+            └── controller/DepartmentController.java
 ```
 
 ---
@@ -93,6 +107,13 @@ This repository contains the hands-on exercise submissions for the **Cognizant D
   - Exercise 2: Implementing Dependency Injection
   - Exercise 4: Creating and Configuring a Maven Project
 
+### Week 4 — Products and Frameworks (Spring Data JPA & Hibernate)
+- **Spring Data JPA with Hibernate**
+  - Exercise 1: Employee Management System — Setup & H2 Configuration
+  - Exercise 2: Creating JPA Entities (Employee & Department with relationships)
+  - Exercise 3: Creating Repositories (EmployeeRepository & DepartmentRepository)
+  - Exercise 4: Implementing CRUD Operations (REST endpoints)
+
 ---
 
 ## 🛠️ Tech Stack
@@ -100,6 +121,10 @@ This repository contains the hands-on exercise submissions for the **Cognizant D
 - Java 11
 - Maven
 - Spring Framework 5.3
+- Spring Boot 2.7
+- Spring Data JPA
+- Hibernate
+- H2 In-Memory Database
 - Spring AOP + AspectJ
 - JUnit 4
 - Mockito
