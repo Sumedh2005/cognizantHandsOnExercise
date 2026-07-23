@@ -61,19 +61,75 @@ This repository contains the hands-on exercise submissions for the **Cognizant D
 │           ├── repository/BookRepository.java
 │           └── aspect/LoggingAspect.java
 │
-└── Week4/
-    └── EmployeeManagementSystem/
-        ├── pom.xml
-        ├── src/main/resources/
-        │   └── application.properties
-        └── src/main/java/com/cognizant/
-            ├── EmployeeManagementApplication.java
-            ├── entity/Employee.java
-            ├── entity/Department.java
-            ├── repository/EmployeeRepository.java
-            ├── repository/DepartmentRepository.java
-            ├── controller/EmployeeController.java
-            └── controller/DepartmentController.java
+├── Week4/
+│   └── EmployeeManagementSystem/
+│       ├── pom.xml
+│       ├── src/main/resources/
+│       │   └── application.properties
+│       └── src/main/java/com/cognizant/
+│           ├── EmployeeManagementApplication.java
+│           ├── entity/Employee.java
+│           ├── entity/Department.java
+│           ├── repository/EmployeeRepository.java
+│           ├── repository/DepartmentRepository.java
+│           ├── controller/EmployeeController.java
+│           └── controller/DepartmentController.java
+│
+├── Week5/
+│   └── spring-learn/
+│       ├── pom.xml
+│       └── src/main/
+│           ├── java/com/cognizant/springlearn/
+│           │   ├── SpringLearnApplication.java
+│           │   ├── Country.java
+│           │   ├── controller/
+│           │   │   ├── HelloController.java
+│           │   │   └── CountryController.java
+│           │   ├── service/
+│           │   │   ├── CountryService.java
+│           │   │   └── exception/CountryNotFoundException.java
+│           │   └── security/
+│           │       ├── AuthenticationController.java
+│           │       ├── AuthenticationRequest.java
+│           │       ├── AuthenticationResponse.java
+│           │       ├── JwtUtil.java
+│           │       └── SecurityConfig.java
+│           └── resources/
+│               ├── application.properties
+│               ├── country.xml
+│               └── date-format.xml
+│
+└── Week6/
+    └── microservices/
+        ├── eureka-discovery-server/
+        │   ├── pom.xml
+        │   └── src/main/
+        │       ├── java/com/cognizant/eurekaserver/
+        │       │   └── EurekaDiscoveryServerApplication.java
+        │       └── resources/application.properties
+        ├── api-gateway/
+        │   ├── pom.xml
+        │   └── src/main/
+        │       ├── java/com/cognizant/gateway/
+        │       │   ├── ApiGatewayApplication.java
+        │       │   └── filters/LogFilter.java
+        │       └── resources/application.properties
+        ├── account-service/
+        │   ├── pom.xml
+        │   └── src/main/
+        │       ├── java/com/cognizant/account/
+        │       │   ├── AccountApplication.java
+        │       │   ├── controller/AccountController.java
+        │       │   └── model/Account.java
+        │       └── resources/application.properties
+        └── loan-service/
+            ├── pom.xml
+            └── src/main/
+                ├── java/com/cognizant/loan/
+                │   ├── LoanApplication.java
+                │   ├── controller/LoanController.java
+                │   └── model/Loan.java
+                └── resources/application.properties
 ```
 
 ---
@@ -114,6 +170,33 @@ This repository contains the hands-on exercise submissions for the **Cognizant D
   - Exercise 3: Creating Repositories (EmployeeRepository & DepartmentRepository)
   - Exercise 4: Implementing CRUD Operations (REST endpoints)
 
+### Week 5 — Products and Frameworks (Spring Boot, REST & Security)
+- **Spring Boot Fundamentals**
+  - Basic REST endpoint with HelloController
+  - Externalized configuration via `application.properties`
+- **Country Service Module**
+  - CountryController exposing REST endpoints backed by CountryService
+  - XML-based data source (`country.xml`) and custom date formatting (`date-format.xml`)
+  - Custom exception handling with `CountryNotFoundException`
+- **Spring Security & JWT Authentication**
+  - AuthenticationController for login/token issuance
+  - JWT generation and validation via `JwtUtil`
+  - Request/response DTOs (`AuthenticationRequest`, `AuthenticationResponse`)
+  - Security configuration (`SecurityConfig`) securing REST endpoints
+
+### Week 6 — Microservices Architecture
+- **Eureka Discovery Server**
+  - Service registry setup for microservice discovery
+- **API Gateway**
+  - Spring Cloud Gateway routing requests to downstream services
+  - Custom logging filter (`LogFilter`) for request/response tracing
+- **Account Service**
+  - Standalone microservice with REST controller and `Account` model
+  - Registered with Eureka for service discovery
+- **Loan Service**
+  - Standalone microservice with REST controller and `Loan` model
+  - Registered with Eureka for service discovery
+
 ---
 
 ## 🛠️ Tech Stack
@@ -126,6 +209,9 @@ This repository contains the hands-on exercise submissions for the **Cognizant D
 - Hibernate
 - H2 In-Memory Database
 - Spring AOP + AspectJ
+- Spring Security + JWT
+- Spring Cloud (Eureka, Gateway)
+- Microservices Architecture
 - JUnit 4
 - Mockito
 - SLF4J + Logback
